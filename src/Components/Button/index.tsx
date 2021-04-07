@@ -15,6 +15,7 @@ export enum ButtonType{
   borderMenu="borderMenu"
 }//定义按钮类型
 interface BaseButtonProps{
+  style?:React.CSSProperties;
   className?:string;
   disabled?:boolean;
   size?:ButtonSize;
@@ -38,7 +39,7 @@ const Button:React.FC<BaseButtonProps>=(props)=>{
     'disabled':disabled
   })
   return (<>
-      <button className={classes} disabled={disabled}>{icon}{children}</button>
+      <button {...props} className={classes} disabled={disabled} >{icon}{children}</button>
   </>
 
   )
