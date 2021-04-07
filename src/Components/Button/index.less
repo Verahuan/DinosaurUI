@@ -1,0 +1,135 @@
+.btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: @brand;
+  height: @btn-height;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @white;
+  border:0;
+  border-radius: @border-radius;
+  padding: @btn-padding-y @btn-padding-x;
+  /* identical to box height, or 157% */
+  &:hover{
+    background-color: @brand-D100;
+    border:0;
+  }
+  &:active{
+    background-color: @brand-D200;
+    border:0;
+  }
+  &:focus{
+   box-shadow: @box-shadow;
+  }
+  &.disabled{
+    background: @brand-D300;
+    opacity: 0.4;
+  }
+  *{
+    margin-right: @spacer;
+  }
+
+}
+//大号按钮和小号按钮的大小
+.btn-lg{
+  height: @btn-height-lg;
+  padding: @btn-padding-y-lg @btn-padding-x-lg;
+
+}
+.btn-sm{
+  height: @btn-height-sm;
+  padding: @btn-padding-y-sm @btn-padding-x-sm;
+  font-size: @font-size-sm;
+}
+//secondary 按钮
+.btn-secondary{
+  background-color: #FFFFFF;
+  color: #18253D;
+  /* 中性色 Neutral/N40 */
+  border: 1px solid @brand-gray-100;
+  &:hover{
+    color: @brand-D300;
+    background-color: @white;
+    /* 中性色 Neutral/N40 */
+    border: 1px solid @brand-D300;
+  }
+  &:active{
+    color: @brand-D400;
+    background-color: @white;
+    /* 中性色 Neutral/N40 */
+    border: 1px solid @brand-D400;
+  }
+  &:focus{
+    background-color: #FFFFFF;
+    box-shadow: @box-shadow;
+  }
+  &.disabled{
+       color: @brand-gray;
+     border: 1px solid @brand-gray;
+       background: @brand-gray-200;
+     }
+}
+//common 按钮
+.btn-common{
+  background: @white;
+  /* 品牌色 Brand/BR50 */
+  color: @brand-D300;
+  border: 1px solid @brand-D300;
+  box-sizing: border-box;
+  border-radius: 4px;
+  &:hover{
+    color: @brand-D300;
+    background-color: @brand-100;
+    /* 中性色 Neutral/N40 */
+    border: 1px solid @brand-D300;
+  }
+  &:active{
+    color: @brand-D400;
+    background-color: @brand-200;
+    /* 中性色 Neutral/N40 */
+    border: 1px solid @brand-D400;
+  }
+  &:focus{
+    background-color: @white;
+    box-shadow: @box-shadow;
+  }
+  &.disabled{
+    color: @brand-gray;
+    background: @white;
+    border: 1px solid @brand-gray;
+  }
+
+}
+
+//subtle 按钮
+.btn-subtle{
+  background-color: @white;
+  border: 1px solid @white;
+  color: #2675FC;
+  &:hover{
+    color: @brand-D300;
+    background-color: @brand-100;
+    /* 中性色 Neutral/N40 */
+    border: 1px solid @white;
+  }
+  &:active{
+    color: @brand-D400;
+    background-color: @brand-200;
+    /* 中性色 Neutral/N40 */
+    border: 1px solid @white;
+  }
+  &:focus{
+    color: @brand-D400;
+    background-color: @brand-200;
+    /* 中性色 Neutral/N40 */
+    border: 1px solid @white;
+    box-shadow: none;
+  }
+  &.disabled{
+    color: @brand-gray;
+    background: @white;
+    border: 0;
+  }
+}

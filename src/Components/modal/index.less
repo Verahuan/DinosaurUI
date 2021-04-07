@@ -1,0 +1,49 @@
+.Modal{
+  position: absolute;
+  width: @modal-width-first;
+  top: @modal-distance;
+  left:50%;
+  margin-left: calc(-@modal-width-first*0.5);
+  z-index: 9999;
+  padding: 0;
+  /* 中性色 Neutral/N00 */
+  background: @white;
+  /* 阴影 Shadow/S4 */
+  box-shadow: @modal-boxShadow;
+  border-radius: @modal-margin;
+  .Modal-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    height: @modal-header-height;
+    border-radius: @modal-margin @modal-margin 0 0;
+    /* 中性色 Neutral/N00 */
+    background: @white;
+    .title{
+      margin-left: @modal-content-margin;
+    }
+    .icon{
+      margin-right: @modal-content-margin;
+    }
+  }
+  .Modal-content{
+    margin: @modal-content-margin;
+    background-color: @brand-100;
+  }
+  .Modal-footer{
+    height: @modal-header-height;
+    border-radius: 0 0 @modal-margin @modal-margin ;
+    /* 中性色 Neutral/N00 */
+    .button{
+      background-color: @brand-D300;
+      width: 200px;
+      height: 32px;
+    }
+  }
+  hr{
+    height: 1px;
+    background:@brand-gray;
+  }
+}
