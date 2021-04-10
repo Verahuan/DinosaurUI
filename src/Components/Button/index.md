@@ -28,7 +28,7 @@ export default () => {
     <Button btnType='subtle' size="sm" disabled></Button>
     <p></p>
     <Button btnType='subtle' size="sm" ></Button>
-    <p></p>
+    <p>red</p>
     <Button btnType='secondary' size="lg"  icon={<AddSvg/> } disabled></Button>
     <p></p>
     <Button btnType='common' size="lg" icon={<AddSvg/> } disabled></Button>
