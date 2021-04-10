@@ -2,6 +2,8 @@
   position: absolute;
   width: @modal-width-first;
   top: @modal-distance;
+  max-height: calc(100vh - @modal-distance*2);
+  overflow-y: auto;
   left:50%;
   margin-left: calc(-@modal-width-first*0.5);
   z-index: 9999;
@@ -35,15 +37,42 @@
   .Modal-footer{
     height: @modal-header-height;
     border-radius: 0 0 @modal-margin @modal-margin ;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
     /* 中性色 Neutral/N00 */
-    .button{
-      background-color: @brand-D300;
-      width: 200px;
-      height: 32px;
-    }
+    .ModalButton{
+         width: 60px;
+         height: 32px;
+      margin-right: 20px;
+       }
   }
   hr{
     height: 1px;
     background:@brand-gray;
   }
+
 }
+.Modal-secondary{
+  width: @modal-width-second;
+  margin-left: calc(-@modal-width-second*0.5);
+}
+.Modal-third{
+  width: @modal-width-third;
+  margin-left: calc(-@modal-width-third*0.5);
+}
+.Modal-fourth{
+  width: @modal-width-fourth;
+  margin-left: calc(-@modal-width-fourth*0.5);
+}
+.Modal-fifth{
+  width: @modal-width-fifth;
+  margin-left: calc(-@modal-width-fifth*0.5);
+}
+.Modal-sixth{
+  width: @modal-width-sixth;
+  margin-left: calc(-@modal-width-sixth*0.5);
+  background-color: #0E3EAD;
+}// 宽度六个尺寸：320、440、680、920、1200、1500（响应式），高度根据自定义
+

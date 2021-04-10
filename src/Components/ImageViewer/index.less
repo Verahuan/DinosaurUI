@@ -1,0 +1,108 @@
+.imageViewer{
+  color: @white;
+  display: flex;
+  flex-direction: column;
+  height: 720px;
+  width: 1200px;
+  border-radius: 0px;
+  /* 不透明度 Opacity/N100_86% */
+  background: rgba(0, 0, 0, 0.86);
+  .header{
+    z-index: 1000;
+    height: 42px;
+    border-radius: 0px;
+    /* 不透明度 Opacity/N100_48% */
+    background: rgba(0, 0, 0, 0.48);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .title{
+      margin-left: 20px;
+    }
+    .icon{
+      margin-right: 20px;
+    }
+  }
+  .body{
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .image-ul{
+      display: flex;
+      height:373px ;
+      flex-direction: row;;
+      align-items: center;
+      overflow: hidden;
+      .image{
+        height: 373px;
+        width: 373px;
+        border-radius: 8px;
+      }
+    }
+    .left{
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      left: 20px;
+      top: calc(50% - 48px/2);
+      background:rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      &:hover{
+        background: rgba(0, 0, 0, 0.48);
+      }
+
+      /* 不透明度 Opacity/N100_48% */
+    }
+    .right{
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      right: 20px;
+      top: calc(50% - 48px/2);
+      /* 不透明度 Opacity/N00_12% */
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      &:hover{
+        background: rgba(0, 0, 0, 0.48);
+      }
+    }
+    .operations{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 32px;
+
+      position: absolute;
+      width: 308px;
+      height: 48px;
+      left: calc(50% - 308px/2);
+      bottom: 40px;
+      /* 不透明度 Opacity/N100_48% */
+      background: rgba(0, 0, 0, 0.48);
+      border-radius: 24px;
+    }
+    .image-middle{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 9px 24px;
+
+      position: absolute;
+      width: 85px;
+      height: 40px;
+      left: calc(50% - 85px/2);
+      top: calc(50% - 40px/2);
+
+      /* 不透明度 Opacity/N100_48% */
+
+      background: rgba(0, 0, 0, 0.48);
+      border-radius: 20px;
+    }
+
+  }
+}
