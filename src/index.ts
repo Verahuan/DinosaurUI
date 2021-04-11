@@ -11,5 +11,6 @@ export {
   SquareRight,
   ScaleSquare,
   Copy,
-  DownLoad
+  DownLoad,
+  Doted
 } from './Components/Icon';

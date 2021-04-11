@@ -1,3 +1,6 @@
+.btn-father{
+  display: flex;
+}
 .btn{
   display: flex;
   flex-direction: row;
@@ -33,16 +36,19 @@
 
 }
 //大号按钮和小号按钮的大小
-.btn-lg{
-  height: @btn-height-lg;
-  padding: @btn-padding-y-lg @btn-padding-x-lg;
+.right{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  &>*{
+    margin:4px;
 
+  }
 }
-.btn-sm{
-  height: @btn-height-sm;
-  padding: @btn-padding-y-sm @btn-padding-x-sm;
-  font-size: @font-size-sm;
+.btn+div{
+  display: none;
 }
+
 //secondary 按钮
 .btn-secondary{
   background-color: #FFFFFF;
@@ -132,4 +138,196 @@
     background: @white;
     border: 0;
   }
+}
+// subtle neutral 清浅按钮
+.btn-subtleNeutral{
+  background-color: @white;
+  border: 1px solid @white;
+  color: #18253D;
+  &:hover{
+    color: #18253D;
+    background-color: #F8F9FA;
+    /* 中性色 Neutral/N40 */
+    border: 1px solid @white;
+  }
+  &:active{
+    color: #2675FC;
+    background-color: #F0F9FF;
+    /* 中性色 Neutral/N40 */
+    border: 1px solid @white;
+  }
+  &:focus{
+    color: #2675FC;
+    background-color: #F0F9FF;
+    /* 中性色 Neutral/N40 */
+    border: 1px solid @white;
+    box-shadow: none;
+  }
+  &.disabled{
+    color: @brand-gray;
+    background: @white;
+    border: 0;
+  }
+}
+// text 按钮
+.btn-text{
+  border: 0;
+  background-color: @white;
+  font-family: @font-family-base ;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  display: flex;
+  align-items: center;
+
+  /* 品牌色 Brand/BR50 */
+
+  color: #2675FC;
+  &:hover{
+    color: #1C59D4;
+    border: 0;
+    background-color: @white;
+  }
+  &:active{
+    color: #0E3EAD;
+    border: 0;
+    background-color: @white;
+  }
+  &:focus{
+    color: #0E3EAD;
+    border: 0;
+    background-color: @white;
+    box-shadow: none;
+  }
+  &.disabled{
+    color: #B8C0D1;
+    border: 0;
+    background-color: @white;
+  }
+}
+// 中性文字按钮
+.btn-textNeutral {
+  border: 0;
+  background-color: @white;
+  font-family: @font-family-base ;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  display: flex;
+  align-items: center;
+
+  /* 品牌色 Brand/BR50 */
+
+  color:#18253D;
+  &:hover{
+    color: #2675FC;
+    border: 0;
+    background-color: @white;
+  }
+  &:active{
+    color: #1C59D4;
+    border: 0;
+    background-color: @white;
+  }
+  &:focus{
+    color: #1C59D4;
+    border: 0;
+    background-color: @white;
+    box-shadow: none;
+  }
+  &.disabled{
+    color: #B8C0D1;
+    border: 0;
+    background-color: @white;
+  }
+}
+// Menu Button 菜单按钮
+.btn-menu{
+  /* 中性色 Neutral/N00 */
+  background-color: @white;
+  /* 中性色 Neutral/N40 */
+  color: #18253D;
+  border: 1px solid #CED4E0;
+  border-radius: 4px 0px 0px 4px;
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 0px;
+  &:hover{
+    background: #FFFFFF;
+    /* 品牌色 Brand/BR50 */
+
+    border: 1px solid #2675FC;
+  }
+  &:active{
+    background: #FFFFFF;
+    /* 品牌色 Brand/BR50 */
+
+    border: 1px solid #2675FC;
+
+  }
+  &:focus{
+    background: #FFFFFF;
+    /* 品牌色 Brand/BR50 */
+    border: 1px solid #2675FC;
+    box-shadow: 0px 0px 0px 4px rgba(45, 147, 250, 0.2);
+  }
+  &+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    width: 32px;
+    height: 32px;
+    /* 中性色 Neutral/N00 */
+
+    background: #FFFFFF;
+    /* 品牌色 Brand/BR50 */
+
+    border: 1px solid #CED4E0;
+    border-radius: 0px 4px 4px 0px;
+    &:hover{
+      background: #FFFFFF;
+      /* 品牌色 Brand/BR50 */
+
+      border: 1px solid #2675FC;
+    }
+    &:active{
+      background: #FFFFFF;
+      /* 品牌色 Brand/BR50 */
+
+      border: 1px solid #2675FC;
+
+    }
+    &:focus{
+      background: #FFFFFF;
+      outline: none;
+      /* 品牌色 Brand/BR50 */
+      border: 1px solid #2675FC;
+      box-shadow: 0px 0px 0px 4px rgba(45, 147, 250, 0.2);
+    }
+  }
+}
+// subtle Menu Button 清浅菜单按钮
+//with Border 描边菜单按钮
+// 菜单按钮组
+.btn-lg{
+  height: @btn-height-lg;
+  padding: @btn-padding-y-lg @btn-padding-x-lg;
+  font-size: @font-size-lg;
+}
+.btn-sm{
+  height: @btn-height-sm;
+  padding: @btn-padding-y-sm @btn-padding-x-sm;
+  font-size: @font-size-sm;
 }

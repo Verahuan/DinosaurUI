@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames'
+import {Doted} from 'dumi-ui';
 export enum ButtonSize{
   Large="lg",
   Small="sm"
@@ -11,6 +12,7 @@ export enum ButtonType{
   subtle="subtle",
   subtleNeutral="subtleNeutral",
   text="text",
+  textNeutral="textNeutral",
   menu="menu",
   borderMenu="borderMenu"
 }//定义按钮类型
@@ -21,6 +23,7 @@ interface BaseButtonProps{
   size?:ButtonSize;
   btnType?:ButtonType;
   icon?:React.ReactNode;
+  iconPosition?:string;
   children?:React.ReactNode
 }//传入button的参数类型
 const Button:React.FC<BaseButtonProps>=(props)=>{
@@ -30,16 +33,21 @@ const Button:React.FC<BaseButtonProps>=(props)=>{
     disabled,
     children,
     size,
-    icon
+    icon,
+    iconPosition
   }=props
   //btn,btn-lg,btn-primary
   const classes=classnames(className,'btn',{
     [`btn-${btnType}`]:btnType,
     [`btn-${size}`]:size,
+    "right":iconPosition==="right",
     'disabled':disabled
   })
   return (<>
-      <button {...props} className={classes} disabled={disabled} >{icon}{children}</button>
+      <div className="btn-father">
+        <button {...props} className={classes} disabled={disabled} >{icon}{children}</button>
+        <div tabIndex={0} ><Doted/></div>
+      </div>
   </>
 
   )

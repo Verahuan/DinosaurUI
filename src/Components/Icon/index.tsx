@@ -171,6 +171,26 @@ const DownLoad:React.FC<iconPorps>=(props)=>{
     </div>
   )
 }
+// menu 菜单相关
+const Doted:React.FC<iconPorps>=(props)=>{
+  const {
+    iconcolor
+  }=props
+  const classes=classnames('icon',{
+    [`icon-${iconcolor}`]:iconcolor
+  })
+  return (
+    <div {...props} >
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.84375 8.59375C4.06713 8.59375 3.4375 9.22329 3.4375 9.99999C3.4375 10.7767 4.06713 11.4062 4.84375 11.4062C5.62037 11.4062 6.25 10.7767 6.25 9.99999C6.25 9.22329 5.62037 8.59375 4.84375 8.59375Z" fill="#18253D"/>
+        <path d="M10 8.59375C9.22333 8.59375 8.59375 9.22333 8.59375 10C8.59375 10.7767 9.22333 11.4062 10 11.4062C10.7767 11.4062 11.4062 10.7767 11.4062 10C11.4062 9.22333 10.7767 8.59375 10 8.59375Z" fill="#18253D"/>
+        <path d="M15.1562 8.59375C14.3797 8.59375 13.75 9.22328 13.75 9.99998C13.75 10.7767 14.3797 11.4062 15.1562 11.4062C15.9328 11.4062 16.5625 10.7767 16.5625 9.99998C16.5625 9.22324 15.9328 8.59375 15.1562 8.59375Z" fill="#18253D"/>
+      </svg>
+    </div>
+  )
+}
+
+
 
 export {
   AddSvg,
@@ -182,5 +202,6 @@ export {
   SquareRight,
   ScaleSquare,
   Copy,
-  DownLoad
+  DownLoad,
+  Doted
 }
