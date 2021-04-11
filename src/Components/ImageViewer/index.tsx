@@ -9,6 +9,7 @@ import { Delete,
   Copy,
   DownLoad
 } from '@/Components/Icon';
+import { ButtonSize, ButtonType } from '@/Components/Button';
 
 // 特性：
 // 1.左右切换（左右切换按钮状态改变）
@@ -16,9 +17,15 @@ import { Delete,
 // 3.点击icon实现旋转
 // 4.点击icon实现图片比例更改
 // 5.点击icon实现下载
-
+interface ImageProps{
+  className?:string;
+  imageList:Array<any>;
+  url?:string;
+  alt?:string;
+  imgIndex:number;
+}//传入image的参数类型
 class ImageViewer extends Component {
-  constructor(props) {
+  constructor(props:ImageProps) {
     super(props);
     this.state = {
       imageList: props.imageList, //传入的图片列表
