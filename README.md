@@ -7,6 +7,7 @@
 * button
 * imageViewer
 * Modal
+* 设计稿中的icon(可改变颜色)
 ### button 
 * 实现过程说明(函数组件，结合下方代码)：
 - 使用`classnames`根据传入属性确定当前样式（样式实现查阅对应，less文件）
